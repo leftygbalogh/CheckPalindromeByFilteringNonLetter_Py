@@ -1,0 +1,33 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'isAlphabeticPalindrome' function below.
+#
+# The function is expected to return a BOOLEAN.
+# The function accepts STRING code as parameter.
+#
+
+def isAlphabeticPalindrome(code):
+    code = list(filter(lambda x: x.lower().isalpha(), code.lower()))
+    rev = list(reversed(code))
+
+    if code == rev:
+        return 1
+    else:
+        return 0
+
+
+if __name__ == '__main__':
+    code = input()
+
+    result = isAlphabeticPalindrome(code)
+
+    print(int(result))
